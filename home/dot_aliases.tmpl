@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+alias {{ .github.user }}="cd ~/github.com/{{ .github.user }}"
+alias tm="cd ~/github.com/taskmedia"
+
+# applications
+{{- if lookPath "docker" }}
+alias d=docker
+{{- end }}
+{{- if lookPath "docker-compose" }}
+alias dc=docker-compose
+{{- end }}
+alias g="git"
+alias h="helm"
+alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
+{{- if lookPath "podman" }}
+alias p="podman"
+{{- end }}
+
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
