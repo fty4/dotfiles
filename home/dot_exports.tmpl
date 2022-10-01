@@ -1,0 +1,8 @@
+# Add `~/bin` to the `$PATH`
+export PATH="$HOME/bin:$PATH";
+
+{{- if eq .chezmoi.os "darwin" }}
+
+# macOS-specific code
+export PATH="/opt/homebrew/bin:$PATH";
+{{- end }}
