@@ -1,1 +1,7 @@
-{{ onepasswordRead "op://Personal/dockerconfig/config.json" }}
+{
+  "auths": {
+    "endpoint": {
+      "auth": "{{- printf "%s:%s" (onepasswordRead "op://Personal/Docker/username" | trim) (onepasswordRead "op://Personal/Docker/password" | trim) | b64enc -}}"
+    }
+  }
+}
