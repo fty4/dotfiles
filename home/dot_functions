@@ -1,3 +1,8 @@
+# open dict.cc dictionary
+dcc () {
+	open "https://www.dict.cc/?s=${(j:+:)@}"
+}
+
 # fetch gitignore.io suggestions for given type
 gi () {
 	curl -fLw '\n' "https://www.gitignore.io/api/${(j:,:)@}"
