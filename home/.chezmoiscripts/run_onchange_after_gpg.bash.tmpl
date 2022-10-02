@@ -11,4 +11,6 @@ launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent-symlink.plist
 
 
 # Import GPG key
-curl https://task.media/pgp | gpg --import -
+if ! gpg --list-keys marco@task.media > /dev/null 2>&1 ; then
+  curl https://task.media/pgp | gpg --import -
+fi
