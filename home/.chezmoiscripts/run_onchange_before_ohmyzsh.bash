@@ -22,6 +22,11 @@ repo_clone_or_pull \
   ${HOME}/.oh-my-zsh \
   https://github.com/ohmyzsh/ohmyzsh.git
 
+# plugin zsh-you-should-use
+repo_clone_or_pull \
+  ${HOME}/.oh-my-zsh/custom/plugins/you-should-use \
+  https://github.com/MichaelAquilina/zsh-you-should-use
+
 # plugin zsh-autosuggestions
 repo_clone_or_pull \
   ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions \
