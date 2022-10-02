@@ -1,0 +1,34 @@
+#!/bin/bash
+
+brew_install() {
+  if brew list $1 &>/dev/null; then
+    echo "${1} is already installed"
+  else
+    brew install $1 && echo "$1 is installed"
+  fi
+}
+
+brew_install_cask() {
+  if brew list $1 &>/dev/null; then
+    echo "${1} is already installed"
+  else
+    brew install --cask $1 && echo "$1 is installed"
+  fi
+}
+
+{{- if eq .chezmoi.os "darwin" }}
+# macOS-specific code
+
+# yubikey
+brew_install gnupg
+brew install gpg2
+brew_install yubikey-personalization
+brew_install hopenpgp-tools
+brew_install ykman
+brew_install pinentry-mac
+brew_install wget
+brew_install_cask gpg-suite-no-mail
+
+brew_install_cask 1password-cli
+brew_install_cask whatsapp
+{{- end }}
