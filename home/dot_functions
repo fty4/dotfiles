@@ -1,3 +1,9 @@
+# fetch gitignore.io suggestions for given type
+gi () {
+	curl -fLw '\n' https://www.gitignore.io/api/"${(j:,:)@}"
+}
+
+# search with google
 google(){
   open "https://www.google.com/search?q=$@"
 }

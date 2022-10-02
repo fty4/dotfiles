@@ -7,7 +7,6 @@ plugins=(\
   docker \
   gh \
   git \
-  gitignore \
   golang \
   gradle \
   helm \
