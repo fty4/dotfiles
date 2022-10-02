@@ -25,7 +25,7 @@ error_symbol = "[❯](red)"
 vicmd_symbol = "[❮](green)"
 
 [cmd_duration]
-format = "[$duration]($style)"
+format = " [$duration]($style)"
 style = "yellow"
 
 [directory]
