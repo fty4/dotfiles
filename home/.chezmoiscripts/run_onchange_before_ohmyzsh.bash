@@ -21,3 +21,13 @@ repo_clone_or_pull () {
 repo_clone_or_pull \
   ${HOME}/.oh-my-zsh \
   https://github.com/ohmyzsh/ohmyzsh.git
+
+# plugin zsh-autosuggestions
+repo_clone_or_pull \
+  ${HOME}/.oh-my-zsh/custom/plugins/zsh-autosuggestions \
+  https://github.com/zsh-users/zsh-autosuggestions
+
+# plugin zsh-syntax-highlighting
+repo_clone_or_pull \
+  ${HOME}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting \
+  https://github.com/zsh-users/zsh-syntax-highlighting.git
