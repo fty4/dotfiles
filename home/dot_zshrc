@@ -1,5 +1,24 @@
 source "${HOME}/.bash_profile"
 
+plugins=(\
+  colored-man-pages \
+  colorize \
+  command-not-found \
+  docker \
+  gh \
+  git \
+  gitignore \
+  golang \
+  gradle \
+  helm \
+  kubectl \
+  minikube \
+  you-should-use \
+  zsh-autosuggestions \
+  zsh-interactive-cd \
+  zsh-syntax-highlighting \
+)
+
 source "${HOME}/.oh-my-zsh/oh-my-zsh.sh"
 
 eval "$(starship init zsh)"
