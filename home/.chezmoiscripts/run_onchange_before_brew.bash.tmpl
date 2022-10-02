@@ -19,6 +19,11 @@ brew_install_cask() {
 {{- if eq .chezmoi.os "darwin" }}
 # macOS-specific code
 
+# zsh
+brew_install starship
+brew tap homebrew/cask-fonts
+brew_install_cask font-Hack-nerd-font
+
 # yubikey
 brew_install gnupg
 brew_install gpg2
