@@ -1,0 +1,8 @@
+{{- if eq .chezmoi.os "darwin" }}
+#!/bin/bash
+
+# configure gpg agent for yubikey
+# TODO: maybe not idempotent
+launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent.plist
+launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent-symlink.plist
+{{- end }}
