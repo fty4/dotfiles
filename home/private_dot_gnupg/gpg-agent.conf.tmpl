@@ -1,0 +1,9 @@
+# https://github.com/drduh/YubiKey-Guide#create-configuration
+enable-ssh-support
+ttyname $GPG_TTY
+default-cache-ttl 60
+max-cache-ttl 120
+
+{{- if eq .chezmoi.os "darwin" }}
+pinentry-program /opt/homebrew/bin/pinentry-mac
+{{- end }}
