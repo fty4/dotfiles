@@ -1,0 +1,11 @@
+" https://askubuntu.com/questions/353911/hitting-arrow-keys-adds-characters-in-vi-editor
+set nocompatible
+
+
+" others
+set nobackup
+set nowritebackup
+set noswapfile
+set noundofile
+set number
+set smartcase
