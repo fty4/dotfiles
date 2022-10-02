@@ -1,4 +1,5 @@
 format = """
+$battery\
 $username\
 $hostname\
 $directory\
@@ -6,17 +7,26 @@ $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
+$git_commit\
 $fill\
+$golang\
+$helm\
+$kubernetes\
 $nodejs\
+$package\
+$python\
 $cmd_duration $jobs $time\
 $line_break\
 $character"""
 
-[nodejs]
-format = "[$symbol($version )]($style)"
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[❮](green)"
 
-[fill]
-symbol = " "
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
 
 [directory]
 style = "blue"
@@ -24,15 +34,31 @@ read_only = " "
 truncation_length = 4
 truncate_to_repo = false
 
-[character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vicmd_symbol = "[❮](green)"
+[fill]
+symbol = " "
 
 [git_branch]
 symbol = " "
 format = "[$symbol$branch]($style) "
 style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
+
+[golang]
+format = "[ $version](bold cyan) "
+
+[helm]
+disabled = true
+format = "[ $version](bold cyan) "
 
 [jobs]
 symbol = ""
@@ -40,29 +66,23 @@ style = "bold red"
 number_threshold = 1
 format = "[$symbol]($style)"
 
-[git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
-style = "cyan"
-
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
-
-[git_metrics]
+[kubernetes]
 disabled = false
+format = '[$symbol$context( \($namespace\))]($style)'
+symbol = "☸ "
 
-[cmd_duration]
-format = "[$duration]($style)"
-style = "yellow"
+[nodejs]
+format = "[$symbol($version )]($style)"
 
-[memory_usage]
-symbol = " "
+[package]
+format = "[$symbol$version]($style) "
+symbol = "📦 "
 
-[rust]
-symbol = " "
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = "🐍 "
 
 [time]
 disabled = false
-style = "bold white"
+style = "#111111"
 format = "[$time]($style)"
-
