@@ -1,0 +1,14 @@
+#!/bin/bash
+
+{{- if eq .chezmoi.os "darwin" }}
+
+# macOS-specific code
+
+# configure gpg agent for yubikey
+launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent.plist
+launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent-symlink.plist
+{{- end }}
+
+
+# Import GPG key
+curl https://task.media/pgp | gpg --import -
