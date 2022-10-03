@@ -6,7 +6,6 @@ plugins=(\
   command-not-found \
   docker \
   gh \
-  git \
   golang \
   gradle \
   helm \
