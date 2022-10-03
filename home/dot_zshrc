@@ -13,7 +13,6 @@ plugins=(\
   minikube \
   you-should-use \
   zsh-autosuggestions \
-  zsh-interactive-cd \
   zsh-syntax-highlighting \
 )
 
