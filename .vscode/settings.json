@@ -1,6 +1,17 @@
 {
   "files.associations": {
+    "*.bash.tmpl": "shellscript",
+    "*.json.tmpl": "json",
+    "*.conf.tmpl": "properties",
+    "*.yaml.tmpl": "yaml",
+
+    "dot_aliases.tmpl": "shellscript",
+    "dot_bash_profile": "shellscript",
+    "dot_exports.tmpl": "shellscript",
     "dot_functions": "shellscript",
-    "dot_gitignore": "ignore"
+    "dot_gitconfig.tmpl": "ini",
+    "dot_gitignore": "ignore",
+    "dot_vimrc": "shellscript",
+    "dot_zshrc": "shellscript"
   }
 }
