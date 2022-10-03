@@ -20,20 +20,50 @@ brew_install_cask() {
 # macOS-specific code
 
 # zsh
-brew_install starship
-brew tap homebrew/cask-fonts
-brew_install_cask font-Hack-nerd-font
+brew_install starship # shell prompt
+brew tap homebrew/cask-fonts # fonts for terminal
+brew_install_cask font-Hack-nerd-font # fonts for terminal
 
 # yubikey
-brew_install gnupg
-brew_install gpg2
-brew_install yubikey-personalization
-brew_install hopenpgp-tools
-brew_install ykman
-brew_install pinentry-mac
-brew_install wget
-brew_install_cask gpg-suite-no-mail
+brew_install gnupg # gpg
+brew_install gpg2 #gpg
+brew_install yubikey-personalization # yubikey manager
+brew_install hopenpgp-tools # gpg
+brew_install ykman # yubikey manager
+brew_install pinentry-mac # gpg client
+brew_install wget # http client cli
+brew_install_cask gpg-suite-no-mail # gpg
 
-brew_install_cask 1password-cli
-brew_install_cask whatsapp
+# programming
+brew_install gh # GitHub cli
+brew_install git # version control
+brew_install go # golang
+# brew_install nvm # node package manager
+brew_install_cask postman # API tool
+# brew_install openjdk # java
+brew_install_cask visual-studio-code
+# brew_install yarn # javascript package manager
+
+# OS tools
+brew_install alt-tab # window manager
+brew_install_cask maccy # clipboard manager
+brew_install_cask rectangle # window manager
+
+# kubernetes
+# brew_install argocd # deployment cli tool
+# brew_install docker # container engine
+brew_install helm # kubernetes package manager
+brew_install k9s # kubernetes cli manager
+brew_install kubernetes-cli # kubernetes cli
+brew_install kubectx # kubernetes context and namespace tool
+# brew_install kubeseal # k8s sealed-secrets cli
+brew_install podman # container engine
+
+# others
+brew_install_cask 1password-cli # password manager cli
+# brew_install ansible
+brew_install_cask google-chrome # browser
+brew_install_cask notion # note tool
+brew_install_cask whatsapp # chat client
+
 {{- end }}
