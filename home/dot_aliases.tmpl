@@ -28,14 +28,6 @@ alias d=docker
 {{- if lookPath "docker-compose" }}
 alias dc=docker-compose
 {{- end }}
-
-alias g="git"
-alias ga="git add"
-alias gc="git commit"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gl="git log --all --decorate --oneline --graph"
-
 alias h="helm"
 alias k="kubectl"
 alias kgd="kubectl get deployment"
@@ -46,6 +38,30 @@ alias kns="kubens"
 {{- if lookPath "podman" }}
 alias p="podman"
 {{- end }}
+
+# git
+alias g="git"
+alias ga="git add"
+alias gc="git commit"
+alias gcmsg="git commit -m"
+alias gcundo="git reset --soft HEAD~1" # Undoing latest commit
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gcp='git cherry-pick'
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gds="git diff --staged"
+alias gl="git log --all --decorate --oneline --graph"
+alias gpull="git pull"
+alias gpush="git push"
+alias gpushf="git push --force"
+alias gr="git remote"
+alias gra="git remote add"
+alias grb="git rebase"
+alias grbi="git rebase -i"
+alias grbm="git rebase $(git_main_branch)"
+alias grbom="git rebase origin/$(git_main_branch)"
+alias gts="git tag -s"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
