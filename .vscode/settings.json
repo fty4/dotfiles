@@ -7,6 +7,7 @@
 
     "dot_aliases.tmpl": "shellscript",
     "dot_bash_profile": "shellscript",
+    "dot_bash_prompt": "shellscript",
     "dot_exports.tmpl": "shellscript",
     "dot_functions": "shellscript",
     "dot_gitconfig.tmpl": "ini",
