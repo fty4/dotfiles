@@ -1,11 +1,2 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
 # gpg
-export GPG_TTY=$(tty)
-
-{{- if eq .chezmoi.os "darwin" }}
-
-# macOS-specific code
-export PATH="/opt/homebrew/bin:$PATH";
-{{- end }}
+export GPG_TTY=$(tty);

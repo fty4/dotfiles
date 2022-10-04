@@ -12,6 +12,7 @@
     "dot_functions": "shellscript",
     "dot_gitconfig.tmpl": "ini",
     "dot_gitignore": "ignore",
+    "dot_path.tmpl": "shellscript",
     "dot_vimrc": "shellscript",
     "dot_zshrc": "shellscript"
   }
