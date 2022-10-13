@@ -5,7 +5,8 @@
 # - functions: functions for the shell
 # - aliases: aliases for commands
 # - extra: -
-for file in ~/.{path,bash_prompt,exports,functions,aliases,extra}; do
+# - custom: custom settings only available for this host (not managed by dotfiles)
+for file in ~/.{path,bash_prompt,exports,functions,aliases,extra,custom}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
