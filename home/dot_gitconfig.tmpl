@@ -1,18 +1,19 @@
 [commit]
-  gpgsign = true
+        gpgsign = true
 
 [core]
-  autocrlf = false
-  eol = lf
-  excludesFile = ~/.gitignore
+        autocrlf = false
+        eol = lf
+        excludesFile = ~/.gitignore
 
 [gpg]
-  program = /opt/homebrew/bin/gpg
+        program = /opt/homebrew/bin/gpg
 
 [init]
-  defaultBranch = main
+        defaultBranch = main
 
 [user]
-  name = {{ .name }}
-  email = {{ .email }}
-  signingKey = {{ onepasswordRead "op://Personal/gpg/signingkey" }}
+[user]
+        name = {{ .name }}
+        email = {{ .email }}
+        signingKey = {{ onepasswordRead "op://Personal/gpg/signingkey" }}
