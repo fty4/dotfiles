@@ -1,4 +1,10 @@
 # Load the shell dotfiles
+# - path: define the PATH variable
+# - bash_prompt: configure the shell prompt
+# - exports: exports
+# - functions: functions for the shell
+# - aliases: aliases for commands
+# - extra: -
 for file in ~/.{path,bash_prompt,exports,functions,aliases,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
