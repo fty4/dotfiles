@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# use podman instead of docker
+export DOCKER_HOST='unix:///Users/{{ .chezmoi.username }}/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
+
 # Make vim the default editor.
 export EDITOR='vim';
 
