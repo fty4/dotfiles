@@ -1,0 +1,9 @@
+#!/bin/bash
+
+{{- if eq .chezmoi.os "darwin" }}
+CONFIGFILE="${HOME}/Library/Application Support/k9s"
+{{ else if eq .chezmoi.os "linux" }}
+CONFIGFILE="${HOME}/.config/k9s"
+{{- end }}
+
+yq eval --inplace '.k9s.noExitOnCtrlC = true' $CONFIGFILE
