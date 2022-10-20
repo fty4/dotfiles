@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# bash autocomplete argo-cd
+compdef _argocd argocd
+source <(argocd completion zsh)
+
+# bash autocomplete argo rollouts
+# TODO: does not work currently with `k argo rollouts *`
+# see: https://github.com/argoproj/argo-rollouts/issues/1716
+compdef _kubectl-argo-rollouts kubectl-argo-rollouts
+source <(kubectl-argo-rollouts completion zsh)
