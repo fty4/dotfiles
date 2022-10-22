@@ -14,6 +14,11 @@ export GPG_TTY=$(tty);
 export LANG="en-US.UTF-8";
 export LANGUAGE=en_US;
 
+# helm diff
+# allow unknown flags e.g. --create-namespace to simplify usage of helm diff
+# see: https://github.com/databus23/helm-diff/issues/298#issuecomment-1008224945
+export HELM_DIFF_IGNORE_UNKNOWN_FLAGS=true
+
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
