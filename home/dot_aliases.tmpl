@@ -12,6 +12,11 @@ alias ll="ls -la"
 alias cdtmp="cd $(mktemp -d)"
 alias cdtemp="cd $(mktemp -d)"
 
+{{- if eq .chezmoi.os "darwin" }}
+# use gfind to extend find on macOS
+alias find=gfind
+{{- end }}
+
 alias finder="open ."
 
 alias {{ .github.user }}="cd ~/github.com/{{ .github.user }}"
