@@ -44,6 +44,7 @@ alias kns="kubens"
 {{- if lookPath "podman" }}
 alias p="podman"
 {{- end }}
+alias jekyll="p run --name jekyll --rm -v $(pwd):/site -p 4000:4000 bretfisher/jekyll-serve"
 
 # git
 alias g="git"
