@@ -29,7 +29,7 @@ format = " [$duration]($style)"
 style = "yellow"
 
 [directory]
-style = "blue"
+style = "green"
 read_only = " "
 truncation_length = 4
 truncate_to_repo = false
