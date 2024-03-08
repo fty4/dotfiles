@@ -1,7 +1,7 @@
 #!/bin/bash
 
 {{- if eq .chezmoi.os "darwin" }}
-CONFIGFILE="${HOME}/Library/Application Support/k9s"
+CONFIGFILE="${HOME}/Library/Application Support/k9s/config.yaml"
 {{ else if eq .chezmoi.os "linux" }}
 CONFIGFILE="${HOME}/.config/k9s"
 {{- end }}
