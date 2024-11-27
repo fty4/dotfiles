@@ -1,8 +1,13 @@
-{{- if eq .chezmoi.os "darwin" }}
 #!/bin/bash
 
+{{- if eq .chezmoi.os "darwin" }}
+
 # configure gpg agent for yubikey
-# TODO: maybe not idempotent
-# launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent.plist
-# launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent-symlink.plist
+
+
+if ! launchctl list | grep -q gnupg.gpg-agent; then
+	echo "gnupg agents are not yet loaded"
+	launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent.plist
+	launchctl load $HOME/Library/LaunchAgents/gnupg.gpg-agent-symlink.plist
+fi
 {{- end }}
