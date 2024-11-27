@@ -6,4 +6,4 @@ CONFIGFILE="${HOME}/Library/Application Support/k9s/config.yaml"
 CONFIGFILE="${HOME}/.config/k9s"
 {{- end }}
 
-yq eval --inplace '.k9s.noExitOnCtrlC = true' $CONFIGFILE
+yq eval --inplace '.k9s.noExitOnCtrlC = true' "$CONFIGFILE"
