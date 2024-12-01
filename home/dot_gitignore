@@ -21,3 +21,8 @@ Thumbs.db
 
 # temp directory
 __tmp/
+
+# custom files
+.env
+todo.md
+values-tm.yaml
