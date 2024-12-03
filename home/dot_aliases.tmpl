@@ -39,12 +39,6 @@ alias kgp="kubectl get pod"
 alias kgs="kubectl get service"
 alias kctx="kubectx"
 alias kns="kubens"
-{{- if lookPath "podman" }}
-alias p="podman"
-# mount HOME directory into VM to ensure volume can be mounted
-# see: https://medium.com/@butkovic/favoring-podman-over-docker-desktop-33368e031ba0
-alias pmi="p machine init --cpus 4 --memory 8192 --rootful -v $HOME:$HOME"
-{{- end }}
 alias jekyll="p run --name jekyll --rm -v $(pwd):/site -p 4000:4000 bretfisher/jekyll-serve"
 
 # git
