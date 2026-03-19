@@ -1,7 +1,13 @@
 #!/bin/bash
 
 {{- if eq .chezmoi.os "darwin" }}
-CONFIGFILE="${HOME}/Library/Application Support/k9s/config.yaml"
+CONFIGPATH="${HOME}/Library/Application Support/k9s"
+CONFIGFILE="${CONFIGPATH}/config.yaml"
+
+# install plugin all namespace resources
+PLUGINFILE="${CONFIGPATH}/plugins.yaml"
+curl -o $PLUGINFILE \
+  https://raw.githubusercontent.com/derailed/k9s/refs/heads/master/plugins/get-all-namespace-resources.yaml
 {{ else if eq .chezmoi.os "linux" }}
 CONFIGFILE="${HOME}/.config/k9s"
 {{- end }}
