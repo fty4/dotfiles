@@ -17,3 +17,9 @@
         name = {{ .name }}
         email = {{ .email }}
         signingKey = {{ onepasswordRead "op://Personal/gpg/signingkey" }}
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
