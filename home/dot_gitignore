@@ -26,3 +26,14 @@ __tmp/
 .env
 todo.md
 values-tm.yaml
+
+.github/copilot-instructions.md
+
+# ai
+ruvector.db
+ruvector.db.lock
+
+**/.claude/settings.local.json
+
+agentdb.rvf
+agentdb.rvf.lock
